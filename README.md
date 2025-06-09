@@ -35,10 +35,10 @@ source $ZSH/oh-my-zsh.sh
 . "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
 
-# HOMEBREW
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# HOMEBREW - Add for Linux / Comment out for MacOS
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# OH-MY-POSH & QUICKTERM Theme
+# OH-MY-POSH & Custom QUICKTERM Theme
 eval "$(oh-my-posh init zsh --config "https://raw.githubusercontent.com/mrtimothyduong/terminal-shell-template/refs/heads/main/quick-term.omp.json")"
 ```
 
