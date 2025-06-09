@@ -1,14 +1,22 @@
 # terminal-shell-template
-Standard builds for any new shell host. Uses zsh as default shell. brew as package manager (macOS + Linux) for standardization. Oh-my-zsh for plugins. Oh-my-posh for themes. Atuin for Shell History.
+Standardising terminal for any new shell host.
+* 🐚 Uses zsh as default shell
+* ☕ brew as package manager (macOS + Linux) for standardization
+* 🔌 Oh-my-zsh for plugins
+* 🎨 Oh-my-posh for themes
+* 📚 Atuin for Shell History.
 
 ## Notes
 **Compatibility**: made for MacOS or x86 Linux hosts. Atuin / Oh-My-Posh and some plugins are not compatible with ARM.
 
 ## Pre-Requisites
-- Steps below rely on a Local Atuin Server. Skip step 5/6 and comment out or remove atuin section in .zshrc
 - Only tested on ARM M1/M4 MacOS & x86 Ubuntu. Had issues with Atuin & Oh-my-zsh with ARM-based Ubuntu. Not tested with WSL/PWSH.
 - Install Menslo Nerd Fonts to render icons / fonts
-- MacOS: Oh-my-Posh Themes only work with non-Terminal.app apps. E.g. iTerm2 
+- MacOS: Oh-my-Posh Themes only work with non-Terminal.app apps. E.g. iTerm2
+- Steps below rely on a Local Atuin Server. Skip step 5/6 and comment out or remove atuin section in .zshrc
+
+## Long-term goals:
+- Streamline it. Reduce the steps & commands.
 
 ## Steps
 1. Connect into Host Terminal / CLI Session (E.g. Localhost or SSH into Remote Host)
