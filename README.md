@@ -11,11 +11,11 @@ Standardising terminal for any new shell host.
 - Only tested on ARM M1/M4 MacOS & x86 Ubuntu. Had issues with Atuin & Oh-my-zsh with ARM-based Ubuntu. Not tested with WSL/PWSH.
 - MacOS: Oh-my-Posh Themes only work with non-Terminal.app apps. E.g. iTerm2
 
-## Pre-Requisites
+### Pre-Requisites
 - Install Menslo Nerd Fonts to render icons / fonts
 - Steps below rely on a Local Atuin Server. Skip step 5/6 and comment out or remove atuin section in .zshrc
 
-## Long-term goals:
+### Long-term goals:
 - Streamline it. Reduce the steps & commands.
 
 ## Steps
