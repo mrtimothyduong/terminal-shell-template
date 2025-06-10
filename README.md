@@ -18,7 +18,7 @@ Standardising terminal for any new shell host.
 ### Long-term goals:
 - Streamline it. Reduce the steps & commands.
 
-## Steps
+# Install
 1. Connect into Host Terminal / CLI Session (E.g. Localhost or SSH into Remote Host)
 2. Install **Homebrew** `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 3. Install **zsh** `sudo apt install zsh` or `brew install zsh`
@@ -54,3 +54,10 @@ eval "$(oh-my-posh init zsh --config "https://raw.githubusercontent.com/mrtimoth
 
 14. `exec zsh`
 15. Log into **Atuin** `atuin login -u username` and use password + keys saved earlier.
+
+## Usage
+1. Re-launch terminal or run `exec zsh` or `source ~/.zshrc`
+2. Press up for **Atuin** and shell history
+3. Start typing for zsh-suggestions / zsh-autocomplete
+4. Test out change-directory using `cd`
+
