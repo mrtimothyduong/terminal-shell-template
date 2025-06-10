@@ -7,16 +7,16 @@ Standardising terminal for any new shell host.
 * 📚 Atuin for Shell History.
 
 ## Notes
-### Compatibility
+### Compatibility 🤖
 - **Made for MacOS or x86 Linux hosts.** Atuin / Oh-My-Posh and some plugins are not compatible with ARM.
 - **Tested on:** ARM M1/M4 MacOS & x86 Ubuntu. Had issues with Atuin & Oh-my-zsh with ARM-based Ubuntu. _Not tested with WSL/PWSH._
 - **MacOS Terminal app**: Oh-my-Posh Themes only work with non-Terminal.app apps. E.g. iTerm2
 
-### Pre-Requisites
+### Pre-requisites ✅
 - Install Menslo Nerd Fonts to render icons / fonts
 - Steps below rely on a Local Atuin Server. Skip step 5/6 and comment out or remove atuin section in .zshrc
 
-### Long-term goals:
+### Long-term goals 🎯
 - Streamline it. Reduce the steps & commands.
 
 # Install
