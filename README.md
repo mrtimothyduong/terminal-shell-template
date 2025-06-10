@@ -1,5 +1,8 @@
 # terminal-shell-template
 Standardising terminal for any new shell host.
+
+<img width="555" alt="image" src="https://github.com/user-attachments/assets/12dd4986-9925-4a76-9488-0e48c90223ed" />
+
 * 🐚 Uses zsh as default shell
 * ☕ brew as package manager (macOS + Linux) for standardization
 * 🔌 Oh-my-zsh for plugins
@@ -61,4 +64,3 @@ eval "$(oh-my-posh init zsh --config "https://raw.githubusercontent.com/mrtimoth
 2. Press up for **Atuin** and shell history
 3. Start typing for zsh-suggestions / zsh-autocomplete
 4. Test out change-directory using `cd`
-
