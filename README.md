@@ -54,7 +54,7 @@ eval "$(oh-my-posh init zsh --config "https://raw.githubusercontent.com/mrtimoth
 ```
 
 14. `exec zsh`
-15. Log into **Atuin** `atuin login -u username` and use password + keys saved earlier.
+15. Log into **Atuin** `atuin login -u username` and use password + keys saved when you originally set-up Atuin
 
 ## Usage
 1. Re-launch terminal or run `exec zsh` or `source ~/.zshrc`
