@@ -6,8 +6,9 @@ Standardising terminal for any new shell host.
 * 🎨 Oh-my-posh for themes
 * 📚 Atuin for Shell History.
 
-### Notes
-**Compatibility**: made for MacOS or x86 Linux hosts. Atuin / Oh-My-Posh and some plugins are not compatible with ARM.
+## Notes
+### Compatibility
+- Made for MacOS or x86 Linux hosts. Atuin / Oh-My-Posh and some plugins are not compatible with ARM.
 - Only tested on ARM M1/M4 MacOS & x86 Ubuntu. Had issues with Atuin & Oh-my-zsh with ARM-based Ubuntu. Not tested with WSL/PWSH.
 - MacOS: Oh-my-Posh Themes only work with non-Terminal.app apps. E.g. iTerm2
 
