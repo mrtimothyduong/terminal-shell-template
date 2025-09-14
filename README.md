@@ -23,41 +23,54 @@ Standardising terminal for any new shell host.
 - Streamline it. Reduce the steps & commands.
 
 # Install
-1. Connect into Host Terminal / CLI Session (E.g. Localhost or SSH into Remote Host)
-2. Install **Homebrew** `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-3. Install **zsh** `sudo apt install zsh` or `brew install zsh`
-4. Install **oh-my-zsh** `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-5. Install **Atuin** `curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh`
-6. Add **Atuin** Sync Address to a new file:`echo "sync_address = \"https://change-to-your-atuin-fqdn\"" >> ~/.config/atuin/config.toml`
-7. Install **oh-my-zsh plugins**:
-  - `git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions`
-  - `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting`
-  - `git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting`
-  - `git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete`
-12. Install **oh-my-posh**: `brew install oh-my-posh`
-13. Update your ~\.zshrc file (Replace all content):
+1. SSH into Ubuntu e.g. `ssh user@linux`
+2. update `sudo apt-get update && sudo apt-get upgrade`
+3. Install **Homebrew**:
+	- `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+	- Then install core-tools: `sudo apt-get install build-essential procps curl file git`
+	- Run the following to enable brew via bash-shell
 
-```SHELL
+```bash
+### Append .bashrc for brew commands
+echo >> ~/.bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+```
+4. Then install **GCC**: `exec bash && brew install gcc`
+5. Install **zsh**: `sudo apt install zsh-autosuggestions zsh-syntax-highlighting zsh`
+6. Install **oh-my-zsh**: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+7. Install **Atuin**
+	- `curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh`
+		- `echo 'eval "$(atuin init zsh)"' >> ~/.zshrc && echo "sync_address = \"https://atuin.domainname.com\"" >> ~/.config/atuin/config.toml`
+		- `exec zsh`
+		- `atuin login -u {ATUINUSERNAME}` & auth with Atuin password + encryption key
+8. Configure *ZSH, zsh-autoSuggestions, Syntax highlighting & zsh-autocomplete*:
+	- `git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting && git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting && git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete`
+9. Install **Oh-My-Posh**: `brew install oh-my-posh`
+10. Update **.zshrc** file: `sudo vi .zshrc` (`ggdG` to select all & delete all) and paste the code below
+
+### .zshrc file
+```zsh
 # PLUGINS
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
 
 # OH-MY-ZSH
 export ZSH="$HOME/.oh-my-zsh"
+UPDATE_ZSH_DAYS=30
 source $ZSH/oh-my-zsh.sh
 
 # ATUIN - Terminal History & Sync
 . "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
 
-# HOMEBREW - Add for Linux / Comment out for MacOS
-# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# HOMEBREW
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# OH-MY-POSH & Custom QUICKTERM Theme
+# OH-MY-POSH & QUICKTERM Theme
 eval "$(oh-my-posh init zsh --config "https://raw.githubusercontent.com/mrtimothyduong/terminal-shell-template/refs/heads/main/quick-term.omp.json")"
 ```
 
-14. `exec zsh`
-15. Log into **Atuin** `atuin login -u username` and use password + keys saved when you originally set-up Atuin
+11. Initialise via `exec zsh`
 
 ## Usage
 1. Re-launch terminal or run `exec zsh` or `source ~/.zshrc`
