@@ -25,3 +25,6 @@ Standardising terminal for any new Terminal host.
 ## Ubuntu Script
 1. Review the contents of `https://raw.githubusercontent.com/mrtimothyduong/terminal-shell-template/refs/heads/main/bootstrap_ubuntu.sh` before you run #2
 2. Run `sudo -v && curl -fsSL https://raw.githubusercontent.com/mrtimothyduong/terminal-shell-template/refs/heads/main/bootstrap_ubuntu.sh | bash`
+
+<img width="494" height="383" alt="image" src="https://github.com/user-attachments/assets/85637e79-b464-4a24-8ce7-748605b0430c" />
+
