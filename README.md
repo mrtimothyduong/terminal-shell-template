@@ -22,7 +22,11 @@ Standardising terminal for any new Terminal host.
 - Streamline it. Reduce the steps & commands.
 - Speed up the load times.
 
-# Installation
+# Ubuntu Script
+1. Review the contents of `https://raw.githubusercontent.com/mrtimothyduong/terminal-shell-template/refs/heads/main/bootstrap_ubuntu.sh` before you run #2
+2. Run `sudo -v && curl -fsSL https://raw.githubusercontent.com/mrtimothyduong/terminal-shell-template/refs/heads/main/bootstrap_ubuntu.sh | bash`
+
+### OLD - Manual Installation
 1. Install **ZSH**: `sudo apt install zsh-autosuggestions zsh-syntax-highlighting zsh zip`
 2. Install **Oh-My-ZSH**: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 3. Install **Atuin**: `curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh`
