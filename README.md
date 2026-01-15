@@ -1,4 +1,5 @@
-# Terminal Shell Bootstrap Template
+# ZSH-Terminal-Bootstrap
+
 Standardising terminal for any new Terminal host.
 
 <img width="555" alt="image" src="https://github.com/user-attachments/assets/12dd4986-9925-4a76-9488-0e48c90223ed" />
@@ -23,8 +24,8 @@ Standardising terminal for any new Terminal host.
 
 # Installation
 ## Ubuntu Script
-1. Review the contents of `https://raw.githubusercontent.com/mrtimothyduong/terminal-shell-template/refs/heads/main/bootstrap_ubuntu.sh` before you run #2
-2. Run `sudo -v && curl -fsSL https://raw.githubusercontent.com/mrtimothyduong/terminal-shell-template/refs/heads/main/bootstrap_ubuntu.sh | bash`
+1. Review the contents of `https://raw.githubusercontent.com/mrtimothyduong/ZSH-Terminal-Bootstrap/refs/heads/main/bootstrap_ubuntu.sh` before you run #2
+2. Run `sudo -v && curl -fsSL https://raw.githubusercontent.com/mrtimothyduong/ZSH-Terminal-Bootstrap/refs/heads/main/bootstrap_ubuntu.sh | bash`
 
 <img width="494" height="383" alt="image" src="https://github.com/user-attachments/assets/85637e79-b464-4a24-8ce7-748605b0430c" />
 
