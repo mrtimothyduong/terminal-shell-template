@@ -35,30 +35,39 @@ Standardising terminal for any new Terminal host.
 8. Update **.zshrc** file: `sudo vi .zshrc` (`ggdG` to select all & delete all) and paste the code below:
 
 ```Shell
-# PLUGINS
-plugins=(
-	git
-	fast-syntax-highlighting
-	zsh-syntax-highlighting
-	zsh-autosuggestions
-	zsh-autocomplete
-)
-
-# OH-MY-ZSH & OH-MY-POSH
-export PATH=$PATH:$HOME/.local/bin
+# OH-MY-ZSH with minimal plugins
 export ZSH="$HOME/.oh-my-zsh"
-UPDATE_ZSH_DAYS=90
+export UPDATE_ZSH_DAYS=30
+
+# Reduced plugin set
+plugins=(
+    git 
+    zsh-autosuggestions 
+    fast-syntax-highlighting
+)
 source $ZSH/oh-my-zsh.sh
 
-# ATUIN - Terminal History & Sync
-. "$HOME/.atuin/bin/env"
-eval "$(atuin init zsh)"
+# Compile completion dump for faster loading
+if [[ -f "$HOME/.zcompdump" && ! -f "$HOME/.zcompdump.zwc" ]] || 
+   [[ "$HOME/.zcompdump" -nt "$HOME/.zcompdump.zwc" ]]; then
+    zcompile "$HOME/.zcompdump"
+fi
 
-# HOMEBREW - Uncomment for MacOS
-# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# Lazy load Atuin (only when needed)
+atuin() {
+    unfunction "$0"
+    . "$HOME/.atuin/bin/env"
+    eval "$(atuin init zsh)"
+    $0 "$@"
+}
 
-# OH-MY-POSH & QUICKTERM Theme
-eval "$(oh-my-posh init zsh --config "~/.quick-term.omp.json")"
+# OH-MY-POSH with local config (much faster)
+if [[ -f ~/.quick-term.omp.json ]]; then
+    eval "$(oh-my-posh init zsh --config ~/.quick-term.omp.json)"
+else
+    # Fallback to simple PS1 if theme missing
+    PS1='%n@%m:%~$ '
+fi
 ```
 
 9. Finally, initialise via `exec zsh`
