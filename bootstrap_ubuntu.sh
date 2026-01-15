@@ -133,7 +133,7 @@ fi
 # 7. Download theme
 print_section "Step 7: Downloading Oh-My-Posh Theme"
 print_status "Downloading quick-term.omp.json theme..."
-curl -L -o ~/.quick-term.omp.json https://raw.githubusercontent.com/mrtimothyduong/terminal-shell-template/refs/heads/main/.quick-term.omp.json
+curl -L -o ~/.quick-term.omp.json https://raw.githubusercontent.com/mrtimothyduong/ZSH-Terminal-Bootstrap/refs/heads/main/.quick-term.omp.json
 if [ $? -eq 0 ]; then
     print_status "Theme downloaded successfully!"
 else
