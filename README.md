@@ -20,6 +20,7 @@ Standardising terminal for any new Terminal host.
 
 ### Long-term goals 🎯
 - Streamline it. Reduce the steps & commands.
+- Speed up the load times.
 
 # Installation
 1. Install **ZSH**: `sudo apt install zsh-autosuggestions zsh-syntax-highlighting zsh zip`
